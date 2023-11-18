@@ -1,0 +1,22 @@
+body{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+#state{
+    background-color: lightblue;
+    padding: 20px;
+
+}
+
+.city-name{
+    background-color: black;
+    color: white;
+    padding: 20px;
+
+}
+
+.city-description{
+    background-color: gray;
+    padding: 20px;
+
+}
