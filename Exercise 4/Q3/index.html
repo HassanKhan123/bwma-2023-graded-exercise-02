@@ -1,0 +1,28 @@
+<html>
+  <head>
+    <title></title>
+  </head>
+  <body>
+    <h1>Modifying HTML elements:</h1>
+    <ol id="myList">
+      <li>DOM manipulation is fun</li>
+      <li>
+        Access the <em>element node</em> associated with the HTML element using
+        <code>document.querySelector()</code>
+      </li>
+      <li>
+        Use the element node's <em>properties</em> to modify the actual element.
+      </li>
+    </ol>
+
+    <script>
+      var orderedList = document.getElementById("myList");
+
+      var listItems = orderedList.getElementsByTagName("li");
+
+      for (var i = 0; i < listItems.length; i++) {
+        listItems[i].style.listStyleType = "upper-roman";
+      }
+    </script>
+  </body>
+</html>
