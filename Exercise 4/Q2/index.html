@@ -1,0 +1,25 @@
+<html>
+  <head> </head>
+  <body>
+    <h1>Creating Lists using JS and the DOM</h1>
+    <script>
+      var unorderedList = document.createElement("ul");
+
+      // Create list items and add them to the unordered list
+      var listItem1 = document.createElement("li");
+      listItem1.textContent = "List Item 1";
+      unorderedList.appendChild(listItem1);
+
+      var listItem2 = document.createElement("li");
+      listItem2.textContent = "List Item 2";
+      unorderedList.appendChild(listItem2);
+
+      var listItem3 = document.createElement("li");
+      listItem3.textContent = "List Item 3";
+      unorderedList.appendChild(listItem3);
+
+      // Append the unordered list to the body of the document
+      document.body.appendChild(unorderedList);
+    </script>
+  </body>
+</html>
