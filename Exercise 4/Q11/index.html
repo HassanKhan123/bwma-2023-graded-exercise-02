@@ -1,0 +1,33 @@
+<html>
+  <head> </head>
+  <style>
+    .newClass {
+      background-color: coral;
+      text-transform: uppercase;
+      text-align: center;
+      font-size: 25px;
+    }
+    .anothernewClass {
+      background-color: powderblue;
+      text-transform: uppercase;
+      font-size: 20px;
+    }
+  </style>
+  <body>
+    <button onclick="test()">Add Class</button>
+    <h2 class="pasta">Pasta</h2>
+    <p>Mary Loves Pasta</p>
+
+    <h2 class="burger">Burger</h2>
+    <p>Ellen loves Burger</p>
+
+    <script>
+      function test() {
+        const firstPara = document.getElementsByTagName("p")[0];
+        const burgerH2 = document.getElementsByClassName("burger")[0];
+        burgerH2.classList.add("anothernewClass");
+        firstPara.classList.add("newClass");
+      }
+    </script>
+  </body>
+</html>
