@@ -1,0 +1,30 @@
+<html>
+  <head> </head>
+  <body id="target">
+    <h1>Welcome to your Browser!</h1>
+
+    <h3 id="browserName">Browser name:</h3>
+    <h3 id="windowSize">Area of the window:</h3>
+    <h3 id="URL">The URL information is as follows:</h3>
+  </body>
+  <script>
+    const browserName = window.navigator.appName;
+    let browserNameText = document.getElementById("browserName").textContent;
+    let windowSizeText = document.getElementById("windowSize").textContent;
+
+    browserNameText = browserNameText + " " + browserName;
+    windowSizeText =
+      windowSizeText + " " + window.outerWidth * window.innerHeight;
+
+    const hostname = document.createElement("p");
+    hostname.textContent = "Hostname: " + window.location.hostname;
+
+    const url = document.createElement("p");
+    url.textContent = "URL: " + window.location.href;
+
+    document.getElementById("browserName").textContent = browserNameText;
+    document.getElementById("windowSize").textContent = windowSizeText;
+    document.getElementById("target").append(hostname);
+    document.getElementById("target").append(url);
+  </script>
+</html>
