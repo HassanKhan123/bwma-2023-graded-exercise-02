@@ -1,0 +1,41 @@
+<html>
+  <head>
+    <title>Exercise: DOM manipulations using onclick event listener</title>
+  </head>
+  <body>
+    <button
+      id="myButton"
+      style="
+        padding: 10px 20px;
+        background-color: #ecf3ef;
+        color: #1e1616;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+      "
+    >
+      Click Me
+    </button>
+
+    <script>
+      function getRandomColor() {
+        var letters = "0123456789ABCDEF";
+        var color = "#";
+        for (var i = 0; i < 6; i++) {
+          color += letters[Math.floor(Math.random() * 16)];
+        }
+        return color;
+      }
+
+      function changeFontColor() {
+        var button = document.getElementById("myButton");
+
+        button.style.color = getRandomColor();
+      }
+
+      document
+        .getElementById("myButton")
+        .addEventListener("click", changeFontColor);
+    </script>
+  </body>
+</html>
