@@ -1,0 +1,93 @@
+*{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    
+    margin: 0px;
+}
+
+.container {
+    background-color: #f5d6e0;
+    padding: 10px;
+}
+
+h1, h5{
+    color: #f0487f;
+}
+
+.box{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 30px 0px;
+}
+
+.section {
+
+    background-color: #eee;
+    padding: 20px;
+}
+
+.form{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 20px;
+}
+
+.label {
+    padding-bottom: 10px;
+    padding-top: 10px;
+}
+
+.cart {
+    background-color: #eee;
+   
+    
+}
+
+input[type="email"],
+input[type="text"],
+input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    font-size: 16px;
+    box-sizing: border-box;
+    /* Add this property to include padding and border in element width */
+}
+
+.state-zip{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+button{
+    width: 100%;
+    background-color: #f0487f;
+    color: white;
+    padding: 20px;
+    font-size: 18px;
+    
+}
+
+.row{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 10px;
+}
+
+a{
+    color: #54abf3;
+}
+
+.price{
+    color: #999999
+}
+
+.cart-section{
+    width: 20%;
+    height: 40%;
+}
