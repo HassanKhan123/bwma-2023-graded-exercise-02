@@ -1,0 +1,41 @@
+<html>
+  <head> </head>
+
+  <body>
+    <ul>
+      <li id="names">
+        Names
+        <ol>
+          <li id="firstname">Frodo</li>
+          <li id="lastname">Bob</li>
+        </ol>
+      </li>
+      <li id="age">Age</li>
+      <li id="occupation">Occupation</li>
+    </ul>
+
+    <button id="myButton" onclick="check()">Check</button>
+
+    <script>
+      function isChild(parent, child) {
+        return parent.contains(child);
+      }
+
+      function check() {
+        var parent = document.getElementById("names");
+        var arr = ["firstname", "lastname", "age", "occupation"];
+
+        for (let i = 0; i < arr.length; i++) {
+          var child = document.getElementById(arr[i]);
+          console.log(
+            child.id +
+              " is a child of " +
+              parent.id +
+              " : " +
+              isChild(parent, child)
+          );
+        }
+      }
+    </script>
+  </body>
+</html>
