@@ -1,0 +1,20 @@
+<html>
+  <head>
+    <title>Exercise: DOM manipulations using onclick event listener</title>
+  </head>
+  <body>
+    <button type="button" onclick="addParagraph()">Click Me!</button>
+    <script>
+      function addParagraph() {
+        // Create a new paragraph element
+        var paragraph = document.createElement("p");
+
+        // Set the text content of the paragraph
+        paragraph.textContent = "Clicked!";
+
+        // Append the paragraph to the body of the document
+        document.body.appendChild(paragraph);
+      }
+    </script>
+  </body>
+</html>
