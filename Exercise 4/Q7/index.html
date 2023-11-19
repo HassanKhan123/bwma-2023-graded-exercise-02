@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      class Product {
+        // Constructor
+        constructor(_name, _price, _amount, _madeIn) {
+          this._name = _name;
+          this._price = _price;
+          this._amount = _amount;
+          this._madeIn = _madeIn;
+        }
+
+        // Getter methods
+        getName() {
+          return this._name;
+        }
+
+        getPrice() {
+          return this._price;
+        }
+
+        getAmount() {
+          return this._amount;
+        }
+
+        getMadeIn() {
+          return this._madeIn;
+        }
+
+        // Setter method
+        setAmount(num) {
+          this._amount = num;
+        }
+
+        // canSell method
+        canSell(num) {
+          return this._amount >= num;
+        }
+
+        // sell method
+        sell(num) {
+          if (this._amount >= num) {
+            // If enough products are available, sell them
+            this._amount -= num;
+          } else {
+            // If not enough products are available, restock and sell
+            this._amount += 2 * num;
+          }
+
+          // Return the updated amount of product left after selling
+          return this._amount;
+        }
+      }
+
+      var product = new Product("Butter", 50, 10, "USA");
+      console.log(product.getName());
+      console.log(product.getPrice());
+      console.log(product.getAmount());
+      console.log(product.getMadeIn());
+      console.log(product.canSell(9));
+      console.log(product.sell(15));
+      console.log(product.sell(8));
+    </script>
+  </body>
+</html>
