@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <form class="container" onsubmit="return validateForm()">
+      <label for="">Email</label>
+      <input type="email" id="email" name="" />
+      <span id="emailError" class="error"></span>
+      <br />
+
+      <label for="">Username</label>
+      <input type="text" name="" id="username" />
+      <span id="usernameError" class="error"></span>
+      <br />
+
+      <label for="">Password</label>
+      <input type="password" name="" id="password" />
+      <span id="passwordError" class="error"></span>
+      <br />
+
+      <button id="btnContactSubmit">Submit</button>
+    </form>
+
+    <script>
+      function validateForm() {
+        // Email validation
+        let email = document.getElementById("email").value;
+        let emailRegex = /^[^\s@]+@[^\s@]+\.[a-zA-Z]{2,}$/;
+        if (!emailRegex.test(email)) {
+          document.getElementById("emailError").innerText =
+            "Invalid email format";
+          return false;
+        }
+
+        // Username validation
+        let username = document.getElementById("username").value;
+        let usernameRegex = /^[a-zA-Z]+$/;
+        if (!usernameRegex.test(username)) {
+          document.getElementById("usernameError").innerText =
+            'Username must be of type="text"';
+          return false;
+        }
+
+        // Password validation
+        let password = document.getElementById("password").value;
+        let passwordRegex = /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}$/;
+        if (!passwordRegex.test(password)) {
+          document.getElementById("passwordError").innerText =
+            "Password must contain at least one number, one uppercase and lowercase letter, and be at least 8 characters long";
+          return false;
+        }
+
+        return true; // Form is valid
+      }
+    </script>
+  </body>
+</html>
