@@ -1,0 +1,48 @@
+<html>
+  <head>
+    <title>Accessing Multiple Elements</title>
+  </head>
+  <body>
+    <h1>Lorem Ipsum</h1>
+    <p class="red">
+      LNeque porro quisquam est qui dolorem ipsum quia dolor sit amet,
+      consectetur, adipisci velit...
+    </p>
+    <p>
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque non
+      velit tellus. Ut maximus hendrerit mi quis mollis. Morbi sed convallis
+      sem. Fusce vitae nisi molestie, tempus nulla eu, condimentum mauris.
+      Nullam congue nibh id odio commodo, at aliquam lacus dignissim. Mauris
+      tincidunt tortor tortor, non euismod elit porta sed. Nunc laoreet nisl in
+      turpis fermentum egestas. Ut lectus odio, vestibulum eget ex id, pharetra
+      vestibulum velit. Morbi elit odio, aliquam quis tincidunt sit amet,
+      rhoncus at ante. Maecenas hendrerit leo ac mauris ullamcorper, in tempus
+      justo sollicitudin. In hac habitasse platea dictumst.
+    </p>
+    <h2 class="red">Ut Sollicitudin</h2>
+    <p>
+      Ut sollicitudin, nisl aliquet tristique auctor, nibh nibh imperdiet dui,
+      ut condimentum est quam id tellus. Etiam ac nisi vel neque aliquet
+      molestie. Ut non suscipit urna. Integer luctus suscipit tellus, eu
+      suscipit lorem commodo in. Quisque odio risus, sodales ut volutpat nec,
+      vestibulum quis elit. Pellentesque massa nisi, dapibus eget tempor eu,
+      gravida sed nisi.
+    </p>
+    <p class="red">
+      Etiam pharetra, ante eget porta auctor, nisi massa finibus odio, et
+      dapibus sem elit nec purus. Aenean ut risus ut velit blandit tristique.
+      Nunc quis ullamcorper ipsum. Interdum et malesuada fames ac ante ipsum
+      primis in faucibus. Aliquam sed ex pharetra, consectetur nunc ac, laoreet
+      nisl. Fusce sed iaculis orci.
+    </p>
+
+    <script>
+      // JavaScript code to change the color
+      const redElements = document.querySelectorAll(".red");
+
+      redElements.forEach(function (element) {
+        element.style.color = "blue";
+      });
+    </script>
+  </body>
+</html>
