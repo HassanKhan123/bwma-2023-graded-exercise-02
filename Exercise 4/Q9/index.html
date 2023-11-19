@@ -1,0 +1,37 @@
+<html>
+  <head>
+    <style>
+      div:first-child > p:first-child {
+        background-color: yellow;
+      }
+      body > p:first-of-type {
+        background-color: orange;
+      }
+      div:nth-of-type(2) > p:first-of-type {
+        background-color: yellow;
+      }
+      body > p:last-of-type {
+        background-color: orange;
+      }
+    </style>
+  </head>
+  <body>
+    <div>
+      <p>This is first paragraph in div 1.</p>
+      <p>This is second paragraph in div 1.</p>
+      <p>This is third paragraph in div 1.</p>
+    </div>
+
+    <p>First paragraph in between two divs.</p>
+
+    <p>Second paragraph in between two divs.</p>
+
+    <div>
+      <p>This is first paragraph in div 2.</p>
+      <p>This is second paragraph in div 2.</p>
+      <p>This is third paragraph in div 2.</p>
+    </div>
+
+    <p>This paragraph is after second div.</p>
+  </body>
+</html>
