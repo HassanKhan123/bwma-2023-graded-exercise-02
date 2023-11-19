@@ -1,0 +1,36 @@
+<html>
+  <head> </head>
+  <body>
+    <div id="twoButtons">
+      <button style="background-color: #28b463" class="button">button</button>
+    </div>
+
+    <script>
+      const btn = document.getElementsByClassName("button")[0];
+      btn.addEventListener("click", replaceButton);
+      function replaceButton() {
+        // Get the parent container
+        var container = document.getElementById("twoButtons");
+
+        // Get the button to be replaced
+        var buttonToRemove = document.querySelector(".button");
+
+        // Remove the existing button
+        container.removeChild(buttonToRemove);
+
+        // Create two new buttons
+        var newButton1 = document.createElement("button");
+        newButton1.style.backgroundColor = "#3498db"; // Set background color for the first new button
+        newButton1.textContent = "New Button 1";
+
+        var newButton2 = document.createElement("button");
+        newButton2.style.backgroundColor = "#e74c3c"; // Set background color for the second new button
+        newButton2.textContent = "New Button 2";
+
+        // Add the new buttons to the container
+        container.appendChild(newButton1);
+        container.appendChild(newButton2);
+      }
+    </script>
+  </body>
+</html>
